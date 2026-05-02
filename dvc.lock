@@ -1,0 +1,26 @@
+schema: '2.0'
+stages:
+  split:
+    cmd: python src/split_data.py
+    deps:
+    - path: dataset/raw/ncr_ride_bookings.csv
+      hash: md5
+      md5: 3a09cea6d171163280018cd7d382891a
+      size: 25537048
+    - path: src/split_data.py
+      hash: md5
+      md5: 39b052dd11ee8e1a3b61aa37faa371ad
+      size: 684
+    outs:
+    - path: dataset/processed/retrain.csv
+      hash: md5
+      md5: d63c12c3879a64a9e3095e4008cc16c9
+      size: 5690459
+    - path: dataset/processed/test.csv
+      hash: md5
+      md5: 55547b333a6eba499c0251aa6a86cf49
+      size: 1422504
+    - path: dataset/processed/train.csv
+      hash: md5
+      md5: bf3c98387d14bdd1b338a62785643aec
+      size: 14227762

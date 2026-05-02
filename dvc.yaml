@@ -1,0 +1,10 @@
+stages:
+  split:
+    cmd: python src/split_data.py
+    deps:
+    - dataset/raw/ncr_ride_bookings.csv
+    - src/split_data.py
+    outs:
+    - dataset/processed/retrain.csv
+    - dataset/processed/test.csv
+    - dataset/processed/train.csv
